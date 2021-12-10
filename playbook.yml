@@ -9,3 +9,10 @@
     - name: update the apt cache if needed
       apt: update_cache=yes cache_valid_time=3600
 
+  tasks:
+    - name: Install node js and npm 
+      apt:
+        state: present
+        name: 
+          - nodejs
+          - npm
