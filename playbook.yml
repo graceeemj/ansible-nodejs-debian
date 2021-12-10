@@ -1,3 +1,11 @@
 ---
 - hosts: all
   become: yes
+
+  vars:
+    node_apps_location: /usr/local/opt/node
+
+  pre_tasks:
+    - name: update the apt cache if needed
+      apt: update_cache=yes cache_valid_time=3600
+
