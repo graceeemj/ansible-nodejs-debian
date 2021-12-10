@@ -16,3 +16,5 @@
         name: 
           - nodejs
           - npm
+    - name: Install forever
+      npm: name=forever global=yes state=present
