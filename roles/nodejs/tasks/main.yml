@@ -1,0 +1,11 @@
+---
+- name: Install node js and npm
+  apt:
+    state: present
+    name:
+      - nodejs
+      - npm
+
+- name: Install forever
+  npm: name=forever global=yes state=present
+
